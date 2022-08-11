@@ -1,4 +1,6 @@
 const router = require('express').Router()
+const rests = require("../models/rests.js")
+
 
 router.get('/new', (req,res) => {
   res.render('places/new')
@@ -23,5 +25,25 @@ router.get('/', (req, res) => {
       
     res.render('places/index', { places })
   })
+
+// router.post('/places', (req,res) => {
+
+//     res.send('post stub')
+//   })
+
+//CREATE
+
+router.post('/', (req, res) => {
+  
+  rests.push(req.body)
+  res.redirect('/places')
+})
+
+// router.get('/places', (req, res) => {
+  
+//   rests.push(req.body)
+//   res.redirect('/places')
+// })
+
 
 module.exports = router
