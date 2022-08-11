@@ -35,8 +35,9 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   
-  rests.push(req.body)
-  res.redirect('/places')
+  console.log(req.body)
+  res.send('POST /places')
+  //res.redirect('/places')
 })
 
 // router.get('/places', (req, res) => {
