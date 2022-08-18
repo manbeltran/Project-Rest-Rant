@@ -102,7 +102,7 @@ router.delete('/:id', (req, res) => {
   }
   else {
     places.splice(id, 1)
-    res.send('/places')
+    res.redirect('/places')
   }
 })
 
