@@ -7,20 +7,21 @@ function new_form () {
             <main>
                 <h1>Add a New Place</h1>
                 <div className="form-group col-sm-4">
-                    <label htmlFor="founded">Founded Year</label>
-                    <input 
-                        type="number" 
-                        className="form-control" 
-                        id="founded" 
-                        name="founded" 
-                        value={new Date().getFullYear()} />
-                    </div>
+                    
+                </div>
 
 
                 <form method="POST" action="/places">
                     <div className="form-group">
                         <label htmlFor="name">Place Name</label>
                         <input className="form-control" id="name" name="name" required />
+                        <label htmlFor="founded">Founded Year</label>
+                    <input 
+                        type="number" 
+                        className="form-control" 
+                        id="founded" 
+                        name="founded" 
+                        defaultvalue={new Date().getFullYear()} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="pic">Place Picture</label>
