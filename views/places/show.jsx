@@ -66,6 +66,16 @@ function show (data) {
 
             <h2>Comments</h2>
             {comments}
+            <div className='row'>
+              {comments}
+            </div>
+
+            <h2>Got a comment?</h2>
+            <form action={`/places/${data.place.id}/comment`} method ="POST">
+              <div>
+                Form
+              </div>
+            </form>
 
             
           </main>
