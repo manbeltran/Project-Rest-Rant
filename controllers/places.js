@@ -70,7 +70,8 @@ router.post('/:id/comment', (req, res) => {
 
 
 router.put('/:id', (req, res) => {
-  res.send('PUT /places/:id stub')
+  res.redirect('places/')
+  // res.send('PUT /places/:id stub')
 })
 
 router.delete('/:id', (req, res) => {
